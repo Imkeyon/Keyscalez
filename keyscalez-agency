@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyscalez Agency - Your Dedicated Digital Growth Partner</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll due to potential overflow */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Custom animations for hero section */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fadeInScale { animation: fadeInScale 1s ease-out forwards; }
+        .animate-slideInLeft { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slideInRight { animation: slideInRight 0.8s ease-out forwards; }
+
+        /* Loading spinner animation */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #3b82f6; /* Blue */
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg p-4 md:p-6 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="text-3xl font-extrabold text-blue-700 mb-4 md:mb-0">
+                Keyscalez<span class="text-gray-900"> Agency</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-wrap justify-center md:space-x-8 space-x-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium py-2 px-3 rounded-md">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium py-2 px-3 rounded-md">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium py-2 px-3 rounded-md">About Me</a>
+                <a href="#case-studies" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium py-2 px-3 rounded-md">Case Studies</a>
+                <a href="#book-call" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium py-2 px-3 rounded-md">Book a Call</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium py-2 px-3 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page - Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-20 md:py-32 overflow-hidden rounded-b-lg">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 animate-slideInLeft">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Unlock Your Digital Potential with Keyscalez Agency.
+                </h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90">
+                    As a dedicated solo expert, I provide personalized, high-impact media marketing strategies designed to scale your business.
+                </p>
+                <a href="#book-call" class="inline-block bg-white text-blue-700 hover:bg-blue-100 font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300">
+                    Book Your Free Strategy Call
+                </a>
+            </div>
+
+            <!-- Image/Illustration -->
+            <div class="md:w-1/2 flex justify-center md:justify-end animate-slideInRight">
+                <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Digital+Growth" alt="Digital Growth Illustration" class="w-full max-w-md rounded-lg shadow-2xl transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
+        <!-- Background shapes for visual interest -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+            <div class="absolute w-64 h-64 bg-white opacity-10 rounded-full -top-16 -left-16 animate-pulse"></div>
+            <div class="absolute w-96 h-96 bg-white opacity-10 rounded-full -bottom-32 -right-32 animate-pulse delay-300"></div>
+        </div>
+    </section>
+
+    <!-- Home Page - Benefits Section -->
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">Why Choose a Dedicated Expert?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Personalized Attention</h3>
+                    <p class="text-gray-600">
+                        Unlike large agencies, you get direct access to the strategist handling your campaigns, ensuring a deep understanding of your business.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8L11 20m-4-7H3a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2h-4m-7 0V7a2 2 0 012-2h4a2 2 0 012 2v4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Agile & Responsive</h3>
+                    <p class="text-gray-600">
+                        Quick adjustments and direct communication mean your campaigns adapt faster to market changes and opportunities.
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border border-gray-200">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM12 14c-1.657 0-3 .895-3 2v1h6v-1c0-1.105-1.343-2-3-2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Direct Expertise</h3>
+                    <p class="text-gray-600">
+                        Benefit from years of hands-on experience in strategy, media buying, and creative direction, all from one source.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Home Page & Dedicated Section) -->
+    <section id="testimonials" class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-12">What Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-blue-200">
+                    <p class="text-gray-700 italic mb-6">
+                        "Keyscalez Agency transformed our lead generation efforts. The personalized approach and deep understanding of our niche delivered incredible results. Highly recommend!"
+                    </p>
+                    <p class="font-semibold text-gray-900">- Sarah J., Tech Startup Founder</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-blue-200">
+                    <p class="text-gray-700 italic mb-6">
+                        "Working with Keyscalez was a game-changer for our e-commerce store. The Facebook Ads strategy significantly boosted our sales and ROI."
+                    </p>
+                    <p class="font-semibold text-gray-900">- Mark T., E-commerce Business Owner</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-blue-200">
+                    <p class="text-gray-700 italic mb-6">
+                        "The UGC ad creatives produced by Keyscalez were exactly what we needed to break through the noise. Fantastic quality and performance!"
+                    </p>
+                    <p class="font-semibold text-gray-900">- Emily R., Brand Marketing Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Page - Detailed Breakdown -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">Our Core Services</h2>
+
+            <!-- ✨ Ad Copy Generator Section -->
+            <div class="max-w-4xl mx-auto bg-blue-100 rounded-xl shadow-lg p-8 md:p-10 mb-12 border border-blue-300 text-left">
+                <h3 class="text-3xl font-bold text-blue-800 mb-4 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 11H9V9h2v6zm4 0h-2V9h2v6zm4 0h-2V9h2v6z"/></svg>
+                    ✨ Ad Copy Generator
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Need fresh ad copy ideas? Describe your product/service and target audience, and let our AI generate compelling options for you!
+                </p>
+                <div class="space-y-4">
+                    <div>
+                        <label for="adCopyInput" class="block text-gray-700 text-sm font-medium mb-2">Product/Service & Target Audience:</label>
+                        <textarea id="adCopyInput" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" rows="3" placeholder="e.g., 'Luxury watches for young professionals who value craftsmanship'"></textarea>
+                    </div>
+                    <button id="generateAdCopyBtn" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                        Generate Ad Copy Ideas
+                        <div id="adCopySpinner" class="spinner ml-3 hidden"></div>
+                    </button>
+                    <div id="adCopyOutput" class="bg-white p-4 rounded-lg border border-gray-200 min-h-[100px] text-gray-800 whitespace-pre-wrap text-left">
+                        Your generated ad copy will appear here.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ✨ Social Media Post Idea Generator Section -->
+            <div class="max-w-4xl mx-auto bg-purple-100 rounded-xl shadow-lg p-8 md:p-10 mb-12 border border-purple-300 text-left">
+                <h3 class="text-3xl font-bold text-purple-800 mb-4 flex items-center">
+                    <svg class="w-8 h-8 mr-3 text-purple-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 15.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zM12 9c-1.38 0-2.5 1.12-2.5 2.5S10.62 14 12 14s2.5-1.12 2.5-2.5S13.38 9 12 9z"/></svg>
+                    ✨ Social Media Post Idea Generator
+                </h3>
+                <p class="text-gray-700 mb-6">
+                    Stuck on social media content? Enter a topic or goal, and our AI will spark some creative post ideas!
+                </p>
+                <div class="space-y-4">
+                    <div>
+                        <label for="socialPostInput" class="block text-gray-700 text-sm font-medium mb-2">Topic or Goal:</label>
+                        <textarea id="socialPostInput" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200" rows="3" placeholder="e.g., 'Promote a new fitness app for beginners' or 'Engage followers about sustainable living'"></textarea>
+                    </div>
+                    <button id="generateSocialPostBtn" class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                        Generate Social Post Ideas
+                        <div id="socialPostSpinner" class="spinner ml-3 hidden"></div>
+                    </button>
+                    <div id="socialPostOutput" class="bg-white p-4 rounded-lg border border-gray-200 min-h-[100px] text-gray-800 whitespace-pre-wrap text-left">
+                        Your generated social media post ideas will appear here.
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Service 1: Facebook Ads -->
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200 text-left">
+                    <h3 class="text-3xl font-bold text-blue-700 mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h-5m-5 0h10a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v10a2 2 0 002 2zm1-10h.01M10 12h.01M13 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Facebook Ads (Lead Generation & eCommerce)
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Leverage the power of Facebook and Instagram to reach your ideal customers. I design and manage highly targeted ad campaigns that convert.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li><strong>Lead Generation:</strong> Drive high-quality leads directly to your sales funnel with optimized campaigns.</li>
+                        <li><strong>eCommerce Sales:</strong> Boost online sales with dynamic product ads, retargeting, and conversion-focused strategies.</li>
+                        <li>Audience Research & Targeting</li>
+                        <li>Ad Creative Development & Testing</li>
+                        <li>Campaign Optimization & Scaling</li>
+                        <li>Detailed Performance Reporting</li>
+                    </ul>
+                    <a href="#book-call" class="mt-6 inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                        Get Started with Facebook Ads
+                    </a>
+                </div>
+
+                <!-- Service 2: Google Ads -->
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200 text-left">
+                    <h3 class="text-3xl font-bold text-blue-700 mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        Google Ads
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Capture demand and reach customers actively searching for your products or services. I create and manage effective Google Search, Display, and Shopping campaigns.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Keyword Research & Strategy</li>
+                        <li>Compelling Ad Copywriting</li>
+                        <li>Bid Management & Optimization</li>
+                        <li>Conversion Tracking Setup</li>
+                        <li>Negative Keyword Management</li>
+                    </ul>
+                    <a href="#book-call" class="mt-6 inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                        Boost Your Google Presence
+                    </a>
+                </div>
+
+                <!-- Service 3: UGC Ad Creatives -->
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200 text-left">
+                    <h3 class="text-3xl font-bold text-blue-700 mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        UGC (User-Generated Content) Ad Creatives
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Authenticity sells. I specialize in developing high-performing User-Generated Content (UGC) style ad creatives that resonate with audiences and drive engagement.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Concept Development for UGC Ads</li>
+                        <li>Scriptwriting & Storyboarding</li>
+                        <li>Coordination with UGC Creators (if needed)</li>
+                        <li>Video Editing & Post-Production</li>
+                        <li>A/B Testing of Creatives</li>
+                    </ul>
+                    <a href="#book-call" class="mt-6 inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                        Create Engaging UGC Ads
+                    </a>
+                </div>
+
+                <!-- Service 4: Social Media Management -->
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-200 text-left">
+                    <h3 class="text-3xl font-bold text-blue-700 mb-4 flex items-center">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        Social Media Management
+                    </h3>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Build a strong, authentic brand presence across key social platforms. I handle content creation, scheduling, and community engagement to foster growth.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                        <li>Content Strategy & Calendar Development</li>
+                        <li>Engaging Post Creation (Text, Image, Video)</li>
+                        <li>Audience Engagement & Community Building</li>
+                        <li>Performance Monitoring & Reporting</li>
+                        <li>Platform-Specific Optimization (Facebook, Instagram, LinkedIn, etc.)</li>
+                    </ul>
+                    <a href="#book-call" class="mt-6 inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+                        Enhance Your Social Presence
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Page -->
+    <section id="about" class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+            <!-- Image -->
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://placehold.co/600x400/60A5FA/FFFFFF?text=Solo+Expert" alt="Solo Expert" class="w-full max-w-md rounded-lg shadow-xl">
+            </div>
+
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-8">About Me & Keyscalez Agency</h2>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Hello! I'm the founder, strategist, and media buyer behind Keyscalez Agency. My journey in digital marketing began with a passion for helping businesses truly connect with their audience and see tangible growth. I've spent years honing my skills in crafting effective ad strategies and compelling content that drives real results.
+                </p>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    At Keyscalez, "solo-run" isn't a limitation; it's our strength. It means you get unparalleled dedication, direct communication, and a personalized strategy that's meticulously crafted for your unique business needs. There are no layers of account managers – just direct access to the expert handling your campaigns.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    I handle everything from initial client communication and strategic planning to ad performance analysis and creative direction. My goal is simple: to be your trusted partner in navigating the complex world of digital advertising and help you achieve significant, measurable growth.
+                </p>
+                <a href="#book-call" class="mt-8 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies / Results Page -->
+    <section id="case-studies" class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">Our Results in Action</h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
+                While specific client data is confidential, here's a glimpse of the impact Keyscalez Agency has made for businesses like yours.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Case Study 1 Placeholder -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 text-left">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4">E-commerce Sales Boost</h3>
+                    <p class="text-gray-700 mb-4">
+                        <strong>Client:</strong> Online Fashion Retailer<br>
+                        <strong>Challenge:</strong> Stagnant sales and high ad spend on generic campaigns.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li>Implemented a new Facebook Ads strategy with dynamic retargeting.</li>
+                        <li>Introduced fresh UGC-style video creatives.</li>
+                        <li>Optimized Google Shopping campaigns for higher ROAS.</li>
+                    </ul>
+                    <p class="font-bold text-gray-900">Outcome: <span class="text-green-600">3x Increase in ROAS, 75% Growth in Monthly Revenue.</span></p>
+                </div>
+
+                <!-- Case Study 2 Placeholder -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-200 text-left">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-4">High-Quality Lead Generation</h3>
+                    <p class="text-gray-700 mb-4">
+                        <strong>Client:</strong> B2B Software Company<br>
+                        <strong>Challenge:</strong> Struggling to acquire qualified leads through digital channels.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                        <li>Developed targeted Facebook Lead Generation campaigns.</li>
+                        <li>Optimized Google Search Ads for specific long-tail keywords.</li>
+                        <li>Implemented a robust lead nurturing email sequence.</li>
+                    </ul>
+                    <p class="font-bold text-gray-900">Outcome: <span class="text-green-600">50% Reduction in CPL, 200% Increase in Qualified Leads.</span></p>
+                </div>
+            </div>
+            <a href="#book-call" class="mt-12 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">
+                Achieve Your Own Success Story
+            </a>
+        </div>
+    </section>
+
+    <!-- Book a Call Page -->
+    <section id="book-call" class="py-16 md:py-24 bg-gradient-to-r from-blue-700 to-indigo-800 text-white text-center rounded-t-lg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8">Ready to Scale Your Business?</h2>
+            <p class="text-lg md:text-xl opacity-90 mb-10 max-w-3xl mx-auto">
+                Let's schedule a free, no-obligation strategy call to discuss your goals and how Keyscalez Agency can help you achieve them.
+            </p>
+            <!-- Placeholder for Calendly Embed -->
+            <div class="bg-white text-gray-800 p-8 rounded-lg shadow-xl max-w-xl mx-auto">
+                <p class="text-xl font-semibold mb-4">Book Your Free Strategy Call Now!</p>
+                <p class="text-gray-600 mb-6">
+                    Click the button below to open my Calendly scheduler and find a time that works best for you.
+                </p>
+                <a href="https://calendly.com/your-keyscalez-link" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105">
+                    Schedule Your Call
+                </a>
+                <p class="text-sm text-gray-500 mt-4">
+                    (This is a placeholder link. Replace with your actual Calendly URL.)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6 text-left">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">How do you work with clients?</h3>
+                    <p class="text-gray-700">
+                        I believe in a collaborative and transparent approach. We start with a discovery call to understand your business and goals. Then, I develop a tailored strategy, execute campaigns, and provide regular, detailed performance reports. You'll have direct communication with me throughout the process.
+                    </p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">What are your pricing models?</h3>
+                    <p class="text-gray-700">
+                        My pricing is customized based on the scope of work, services required, and your specific goals. I offer competitive rates and aim to provide maximum value. We can discuss a suitable model (e.g., retainer, performance-based) during our strategy call.
+                    </p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">What is the typical turnaround time for new campaigns?</h3>
+                    <p class="text-gray-700">
+                        After our initial strategy alignment and content gathering, new campaigns can typically be launched within 1-2 weeks, depending on complexity and creative requirements. My agile approach ensures efficient setup and deployment.
+                    </p>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Do you work with businesses of all sizes?</h3>
+                    <p class="text-gray-700">
+                        I primarily partner with small to medium-sized businesses and ambitious startups who are ready to invest in serious digital growth. My focus is on delivering high-impact results for clients who value a dedicated and expert approach.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12">Get in Touch</h2>
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 border border-blue-200">
+                <p class="text-lg text-gray-700 mb-8">
+                    Have a question or want to discuss your project? Fill out the form below or reach out to me directly.
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-left text-gray-700 text-sm font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-gray-700 text-sm font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="your.email@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-left text-gray-700 text-sm font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200" placeholder="Tell me about your project or question..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+                <div class="mt-8 text-gray-600">
+                    <p>Email me directly: <span class="font-semibold text-blue-600">signwithkey@keyscalezagency.com</span></p>
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <a href="https://facebook.com/keyscalez" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="https://linkedin.com/company/keyscalez" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h24v24H0V0zm4.07 20.47V9.09h3.48v11.38H4.07zM5.81 7.37c-1.12 0-2.03-.91-2.03-2.03S4.69 3.31 5.81 3.31s2.03.91 2.03 2.03-.91 2.03-2.03 2.03zm13.12 13.1V14.5c0-1.45-.03-2.61-1.59-2.61-1.59 0-1.83 1.2-1.83 2.53v5.95h-3.48V9.09h3.48v1.51c.49-.89 1.62-1.83 3.34-1.83 3.6 0 4.26 2.37 4.26 7.28v5.95h-3.48z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <!-- Add other social media icons as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 rounded-t-lg">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-4 md:mb-0">
+                    <a href="#home" class="text-3xl font-extrabold text-blue-400">
+                        Keyscalez<span class="text-white"> Agency</span>
+                    </a>
+                    <p class="text-gray-400 text-sm mt-2">&copy; 2025 Keyscalez Agency. All rights reserved.</p>
+                </div>
+                <div class="flex flex-wrap justify-center space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                    <a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Me</a>
+                    <a href="#case-studies" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">Crafted with precision by Your AI Assistant</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to call the Gemini API
+        async function callGeminiAPI(prompt, outputElement, spinnerElement) {
+            outputElement.textContent = ''; // Clear previous output
+            spinnerElement.classList.remove('hidden'); // Show spinner
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+            const payload = { contents: chatHistory };
+            const apiKey = ""; // Canvas will automatically provide this in runtime
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(`API error: ${response.status} ${response.statusText} - ${JSON.stringify(errorData)}`);
+                }
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const text = result.candidates[0].content.parts[0].text;
+                    outputElement.textContent = text;
+                } else {
+                    outputElement.textContent = "No content generated. Please try again.";
+                    console.error("Unexpected API response structure:", result);
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                outputElement.textContent = `Error generating content: ${error.message}. Please try again later.`;
+            } finally {
+                spinnerElement.classList.add('hidden'); // Hide spinner
+            }
+        }
+
+        // Ad Copy Generator Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const generateAdCopyBtn = document.getElementById('generateAdCopyBtn');
+            const adCopyInput = document.getElementById('adCopyInput');
+            const adCopyOutput = document.getElementById('adCopyOutput');
+            const adCopySpinner = document.getElementById('adCopySpinner');
+
+            if (generateAdCopyBtn) {
+                generateAdCopyBtn.addEventListener('click', async () => {
+                    const input = adCopyInput.value.trim();
+                    if (input) {
+                        const prompt = `Generate 3 short, compelling ad copy ideas for the following product/service and target audience: "${input}". Focus on benefits and a clear call to action. Format each idea with a number and a new line.`;
+                        await callGeminiAPI(prompt, adCopyOutput, adCopySpinner);
+                    } else {
+                        adCopyOutput.textContent = "Please describe your product/service and target audience to generate ad copy.";
+                    }
+                });
+            }
+
+            // Social Media Post Idea Generator Logic
+            const generateSocialPostBtn = document.getElementById('generateSocialPostBtn');
+            const socialPostInput = document.getElementById('socialPostInput');
+            const socialPostOutput = document.getElementById('socialPostOutput');
+            const socialPostSpinner = document.getElementById('socialPostSpinner');
+
+            if (generateSocialPostBtn) {
+                generateSocialPostBtn.addEventListener('click', async () => {
+                    const input = socialPostInput.value.trim();
+                    if (input) {
+                        const prompt = `Generate 3 creative social media post ideas for the following topic or goal: "${input}". Include a hook, main message, and a call to action for each. Format each idea with a number and a new line.`;
+                        await callGeminiAPI(prompt, socialPostOutput, socialPostSpinner);
+                    } else {
+                        socialPostOutput.textContent = "Please enter a topic or goal to generate social media post ideas.";
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
